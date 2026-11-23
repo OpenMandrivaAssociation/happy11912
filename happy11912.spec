@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%global _find_debuginfo_opts --no-ar-files
 Summary:	Happy 1.19.12 built by GHC 8.8.4
 Name:		happy11912
 Version:	1.19.12

@@ -20,6 +20,10 @@ Source5:	happy11912-build.sh
 Source6:	%{name}.rpmlintrc
 
 BuildRequires:	ghc88
+# ghc88 links with -lgmp and -lnuma. The .so symlinks come from the
+# devel packages; the ghc88 runtime requires do not pull them in.
+BuildRequires:	pkgconfig(gmp)
+BuildRequires:	pkgconfig(numa)
 BuildRequires:	ghc74tools
 BuildRequires:	cpphs-mhs
 BuildRequires:	gcc
